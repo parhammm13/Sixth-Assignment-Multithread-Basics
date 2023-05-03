@@ -31,6 +31,7 @@ public class FindMultiples
         int n;
         int a;
         ArrayList<Integer> divisible = new ArrayList<Integer>();
+
         public divisible3(int n , int a , ArrayList<Integer> divisibles){
             this.n = n;
             this.divisible = divisible;
@@ -55,7 +56,9 @@ public class FindMultiples
     */
     public int getSum(int n) throws InterruptedException {
         int sum = 0;
+
         ArrayList<Integer> divisibles = new ArrayList<>();
+
         divisible3 dev3 = new divisible3(n, 3, divisibles);
         divisible3 dev5 = new divisible3(n, 5, divisibles);
         divisible3 dev7 = new divisible3(n, 7, divisibles);
@@ -65,23 +68,28 @@ public class FindMultiples
 
         thread3.start();
         thread3.join();
+
         for (int i = 0; i < 1 ; i++) {
             divisibles.addAll(dev3.divisible);
         }
+
         thread5.start();
         thread5.join();
         for (int i = 0; i < 1; i++) {
             divisibles.addAll(dev5.divisible);
         }
+
         thread7.start();
         thread7.join();
+
         for (int i = 0; i < 1; i++) {
             divisibles.addAll(dev7.divisible);
         }
-//        System.out.println(divisibles);// for test
+
         Set<Integer> set = new HashSet<Integer>(divisibles);
         divisibles.clear();
         divisibles.addAll(set);
+
 //        System.out.println(divisibles);// for test
         for ( int i : divisibles){
             sum += i;

@@ -91,6 +91,7 @@ public class UseInterrupts
     public static void main(String[] args) throws InterruptedException {
         SleepThread sleepThread = new SleepThread(5);
         sleepThread.start();
+
         Timer timer = new Timer();
         TimeOutTask timeOutTask = new TimeOutTask(sleepThread, timer);
         timer.schedule(timeOutTask, 3000);
@@ -99,6 +100,7 @@ public class UseInterrupts
 
         LoopThread loopThread = new LoopThread(3);
         loopThread.start();
+
         Timer timer2 = new Timer();
         TimeOutTask timeOutTask2 = new TimeOutTask(loopThread, timer2);
         timer2.schedule(timeOutTask2, 3000);
