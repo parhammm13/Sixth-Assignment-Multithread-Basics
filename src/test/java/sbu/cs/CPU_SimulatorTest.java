@@ -18,7 +18,7 @@ public class CPU_SimulatorTest {
     }
 
     @Test
-    void testOne() {
+    void testOne() throws InterruptedException {
         Task[] taskArray = {new Task("A", 50),
                 new Task("B", 150),
                 new Task("C", 10),
@@ -33,7 +33,7 @@ public class CPU_SimulatorTest {
     }
 
     @Test
-    void testTwo() {
+    void testTwo() throws InterruptedException{
         Task[] taskArray = {new Task("A", 100),
                 new Task("B", 90),
                 new Task("C", 80),
@@ -52,7 +52,7 @@ public class CPU_SimulatorTest {
     }
 
     @Test
-    void testThree() {
+    void testThree() throws InterruptedException{
         Task[] taskArray = {new Task("A", 0),
                 new Task("B", 1000),
                 new Task("C", 200),
