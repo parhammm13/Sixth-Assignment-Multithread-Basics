@@ -15,42 +15,42 @@ public class FindMultiplesTest {
     }
 
     @Test
-    void testOne() {
+    void testOne() throws InterruptedException {
         int n = 9;
         int target_sum = 30;
         assertEquals(target_sum, findMultiples.getSum(n));
     }
 
     @Test
-    void testTwo() {
+    void testTwo() throws InterruptedException{
         int n = 15;
         int target_sum = 81;
         assertEquals(target_sum, findMultiples.getSum(n));
     }
 
     @Test
-    void testThree() {
+    void testThree() throws InterruptedException{
         int n = 1000;
         int target_sum = 272066;
         assertEquals(target_sum, findMultiples.getSum(n));
     }
 
     @Test
-    void testFour() {
+    void testFour() throws InterruptedException{
         int n = 58;
         int target_sum = 964;
         assertEquals(target_sum, findMultiples.getSum(n));
     }
 
     @Test
-    void testFive() {
+    void testFive() throws InterruptedException{
         int n = 76293;
         int target_sum = 1579905952;
         assertEquals(target_sum, findMultiples.getSum(n));
     }
 
     @Test
-    void testSix() {
+    void testSix() throws InterruptedException{
         int n = 1;
         int target_sum = 0;
         assertEquals(target_sum, findMultiples.getSum(n));
